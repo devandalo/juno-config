@@ -11,6 +11,9 @@ spec:
     - namespace: "*"
       server: https://kubernetes.default.svc
       name: in-cluster
+    - name: juno-lab-aks
+      server: https://juno-lab-c6uths9x.hcp.norwayeast.azmk8s.io
+      namespace: "*"
   clusterResourceWhitelist:
     - group: "*"
       kind: "*"
