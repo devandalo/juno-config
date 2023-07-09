@@ -4,6 +4,12 @@ metadata:
   name: juno-platform
   namespace: argocd
 spec:
+  clusterResourceWhitelist:
+    - group: "*"
+      kind: "*"
+  namespaceResourceWhitelist:
+    - group: "*"
+      kind: "*"
   description: juno-platform project
   sourceRepos:
     - "*"
@@ -14,9 +20,3 @@ spec:
     - name: juno-lab-aks
       server: https://juno-lab-c6uths9x.hcp.norwayeast.azmk8s.io
       namespace: "*"
-  clusterResourceWhitelist:
-    - group: "*"
-      kind: "*"
-  namespaceResourceWhitelist:
-    - group: "*"
-      kind: "*"
