@@ -1,1 +1,1 @@
-# juno-rescs
+# juno-config
