@@ -11,7 +11,7 @@ spec:
     path: lab
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: juno-apps
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
