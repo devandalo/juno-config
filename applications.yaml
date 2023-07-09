@@ -4,7 +4,7 @@ metadata:
   name: juno-lab-apps
   namespace: argocd
 spec:
-  project: juno
+  project: juno-platform
   source:
     repoURL: https://github.com/devandalo/juno-config.git
     targetRevision: HEAD
