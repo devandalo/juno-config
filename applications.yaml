@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: juno-lab-apps
+  namespace: argocd
+spec:
+  project: juno-platform
+  source:
+    repoURL: https://github.com/devandalo/juno-config.git
+    targetRevision: HEAD
+    path: lab
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: juno-apps
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
